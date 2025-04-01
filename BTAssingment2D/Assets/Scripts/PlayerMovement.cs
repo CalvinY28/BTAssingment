@@ -36,9 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y); // Movement in fixed update
 
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer); // Checking ground using empty player object
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y); // Movement in fixed update
 
     }
     void OnDrawGizmosSelected() // Select the player to check the OverlapCircle
