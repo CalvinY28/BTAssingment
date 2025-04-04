@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-
+    // Getting the AIPATH script so the AI can chase the target
     public Transform target;
     private AIPath aiPath;
 

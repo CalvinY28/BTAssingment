@@ -36,7 +36,7 @@ namespace NodeCanvas.Tasks.Conditions
 		protected override bool OnCheck()
 		{
 
-			RaycastHit2D hit = Physics2D.Raycast(agent.position, Vector2.down, Length, PlayerLayer);
+			RaycastHit2D hit = Physics2D.Raycast(agent.position, Vector2.down, Length, PlayerLayer); // If hit the RAYCAST return
 
 			if (hit.collider != null && hit.collider.CompareTag("Player"))
 			{

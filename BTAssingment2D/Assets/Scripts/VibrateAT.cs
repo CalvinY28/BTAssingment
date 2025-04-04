@@ -43,12 +43,12 @@ namespace NodeCanvas.Tasks.Actions {
         {
             float elapsed = 0f;
 
-            while (elapsed < duration)
+            while (elapsed < duration) // True while elapsed time is less then set duration
             {
-                float offsetX = Random.Range(-1f, 1f) * magnitude;
+                float offsetX = Random.Range(-1f, 1f) * magnitude; // Vibrating the thang with random offsets times set magnitude
                 float offsetY = Random.Range(-1f, 1f) * magnitude;
 
-                agent.localPosition = originalPos + new Vector3(offsetX, offsetY, 0f);
+                agent.localPosition = originalPos + new Vector3(offsetX, offsetY, 0f); // Shmoving
                 elapsed += Time.deltaTime;
 
                 yield return null;

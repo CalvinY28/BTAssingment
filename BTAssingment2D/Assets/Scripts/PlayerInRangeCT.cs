@@ -29,7 +29,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-            Collider2D hit = Physics2D.OverlapCircle(agent.position, radius, playerLayer);
+            Collider2D hit = Physics2D.OverlapCircle(agent.position, radius, playerLayer); // If hit the player tag return
             return hit != null && hit.CompareTag("Player");
         }
 
