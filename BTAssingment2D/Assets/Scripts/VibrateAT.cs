@@ -12,7 +12,7 @@ namespace NodeCanvas.Tasks.Actions {
 		public float magnitude;
 
         private Vector3 originalPos;
-        private MonoBehaviour aiChaseScript; // Getting my script to disabled it so i can stop moving
+        private MonoBehaviour aiChaseScript; // Getting my script to disabled it so it can stop moving // note: however now he can shoot you mid air and just stay in the sky
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
