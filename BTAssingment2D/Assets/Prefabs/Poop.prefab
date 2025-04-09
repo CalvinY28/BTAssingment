@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2908341314955983447}
   - component: {fileID: 677824463572950056}
   - component: {fileID: 7237712776274991166}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Poop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.21629941
 --- !u!114 &7237712776274991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
