@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 625723385}
   - component: {fileID: 625723380}
   - component: {fileID: 625723379}
+  - component: {fileID: 625723387}
   m_Layer: 8
   m_Name: MonkeyAI
   m_TagString: Untagged
@@ -712,6 +713,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1495801381}
+--- !u!114 &625723387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625723377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a3281d58c57c647aac5eb77647ce8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitByProjectile: 0
 --- !u!1 &629151015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,17 +5700,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":333.0,"y":119.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"policy":1,"dynamic":true,"_position":{"x":328.0,"y":215.0},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"1"},{"_position":{"x":83.27612,"y":402.6205},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_position":{"x":-87.82233,"y":548.0385},"$type":"NodeCanvas.BehaviourTrees.Inverter","$id":"3"},{"_condition":{"radius":4.0,"playerLayer":{"value":8},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Conditions.PlayerInRange"},"_position":{"x":-111.8223,"y":576.0385},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"4"},{"_action":{"stuckDuration":{"_value":1.0},"movementThreshold":{"_value":0.1},"$type":"NodeCanvas.Tasks.Actions.StuckSecondsAT"},"_position":{"x":27.27612,"y":576.6205},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"5"},{"_action":{"jumpForce":{"_value":5.0},"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.JumpAT"},"_position":{"x":164.2761,"y":576.6205},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_position":{"x":460.4618,"y":437.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"7"},{"_condition":{"radius":4.0,"playerLayer":{"value":8},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Conditions.PlayerInRange"},"_position":{"x":316.4618,"y":540.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"8"},{"_action":{"duration":1.0,"magnitude":0.1,"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.VibrateAT"},"_position":{"x":456.4618,"y":539.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"bananaPrefab":{"_name":"Bana","_targetVariableID":"dad67e61-8219-4e46-9c8d-af29ad0af3bd"},"force":15.0,"$type":"NodeCanvas.Tasks.Actions.ThrowBanaAT"},"_position":{"x":559.4618,"y":540.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Jump/Unstuck","rect":{"xMin":-141.8223,"yMin":337.6205,"xMax":275.2761,"yMax":665.6205},"autoGroup":true},{"name":"Bana
-    Throwing","rect":{"xMin":286.4618,"yMin":372.0,"xMax":695.4618,"yMax":629.0},"color":{"r":1.0,"g":0.9186074,"a":0.2039216},"autoGroup":true}],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":243.0,"y":42.0},"$type":"NodeCanvas.BehaviourTrees.Selector","$id":"0"},{"_position":{"x":13.0759,"y":146.6533},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"1"},{"_condition":{"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Conditions.IsHitCT"},"_position":{"x":-56.9241,"y":223.6533},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"2"},{"_action":{"duration":{"_value":2.0},"spinSpeed":{"_value":1000.0},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Actions.SpinForSecondsAT"},"_position":{"x":53.0759,"y":223.6533},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"3"},{"policy":1,"dynamic":true,"_position":{"x":328.0,"y":215.0},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"4"},{"_position":{"x":83.27612,"y":402.6205},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"5"},{"_position":{"x":-87.82233,"y":548.0385},"$type":"NodeCanvas.BehaviourTrees.Inverter","$id":"6"},{"_condition":{"radius":4.0,"playerLayer":{"value":8},"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Conditions.PlayerInRange"},"_position":{"x":-111.8223,"y":576.0385},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"7"},{"_action":{"stuckDuration":{"_value":1.0},"movementThreshold":{"_value":0.1},"$type":"NodeCanvas.Tasks.Actions.StuckSecondsAT"},"_position":{"x":27.27612,"y":576.6205},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"8"},{"_action":{"jumpForce":{"_value":5.0},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Actions.JumpAT"},"_position":{"x":164.2761,"y":576.6205},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_position":{"x":460.4618,"y":437.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"10"},{"_condition":{"radius":4.0,"playerLayer":{"value":8},"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Conditions.PlayerInRange"},"_position":{"x":316.4618,"y":540.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"11"},{"_action":{"duration":1.0,"magnitude":0.1,"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Actions.VibrateAT"},"_position":{"x":456.4618,"y":539.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"12"},{"_action":{"bananaPrefab":{"_name":"Bana","_targetVariableID":"dad67e61-8219-4e46-9c8d-af29ad0af3bd"},"force":15.0,"$type":"NodeCanvas.Tasks.Actions.ThrowBanaAT"},"_position":{"x":559.4618,"y":540.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"13"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"5"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"8"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"11"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"13"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[{"name":"Jump/Unstuck","rect":{"xMin":-141.8223,"yMin":337.6205,"xMax":275.2761,"yMax":665.6205},"autoGroup":true},{"name":"Bana
+    Throwing","rect":{"xMin":286.4618,"yMin":372.0,"xMax":695.4618,"yMax":629.0},"color":{"r":1.0,"g":0.9186074,"a":0.2039216},"autoGroup":true},{"name":"Spin
+    When Hit by Poop","rect":{"xMin":-86.9241,"yMin":81.65331,"xMax":220.0759,"yMax":312.6533},"color":{"r":0.745283,"g":0.2847544,"b":0.2847544,"a":0.2039216},"autoGroup":true}],"localBlackboard":{"_variables":{}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
-  - {fileID: 1793766143}
   - {fileID: 625723378}
+  - {fileID: 1793766143}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 408.92413, y: -68.65331}
+    _translation: {x: 360, y: 30}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
